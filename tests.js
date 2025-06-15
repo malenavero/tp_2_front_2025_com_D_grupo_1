@@ -53,12 +53,12 @@ function switchTest(numero) {
 		case 6:
 			testEjercicio6();
 			break;
-		// case 7:
-		// 	testEjercicio7();
-		// 	break;
-		// case 8:
-		// 	testEjercicio8();
-		// 	break;
+		case 7:
+			testEjercicio7();
+			break;
+		case 8:
+			testEjercicio8();
+			break;
 		// case 9:
 		// 	testEjercicio9();
 		// 	break;
@@ -101,11 +101,26 @@ function testEjercicio6() {
 }
 
 function testEjercicio7() {
-    
+    console.log(`🧮 Test 1: fibonacci(5) = ${fibonacci(5)}`);
+    console.log(`🧮 Test 2: fibonacci(8) = ${fibonacci(8)}`);
+    console.log(`🧮 Test 3: fibonacci(1) = ${fibonacci(1)}`);
 }
 
 function testEjercicio8() {
-  
+	console.log("🛒 forEach → Mostrar productos:");
+    listarProductosPorNombreYPrecio(productos);
+
+    console.log("\n🛒 map → Nombres de productos:");
+    console.log("Nombres:", mapearNombresProductos(productos));
+
+    console.log("\n🛒 filter → Electrónica con stock > 20:");
+    console.log("Resultado:", filtrarProductosCategoriaYStock(productos, "electrónica", 20));
+
+    console.log("\n🛒 find → Producto con ID 3:");
+    console.log("Resultado:", findById(productos, 3));
+
+    console.log("\n🛒 reduce → Valor total del inventario:");
+    console.log("Total:", valorTotalInventario(productos));  
 }
 
 function testEjercicio9() {
