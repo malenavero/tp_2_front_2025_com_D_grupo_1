@@ -97,3 +97,78 @@ Con `forEach` mostramos los nombres y precios, `map` nos sirvió para obtener un
 `filter` nos permitió seleccionar productos según categoría y stock, `find` busca un producto por ID,
 y con `reduce` calculamos el valor total del inventario multiplicando precio por stock. Solo en el primer caso imprimimos en consola, para el resto se muestra por consola con un console que llama a la funcion.
 */
+
+/////////////////////////
+// Solución 9: Estudiantes
+
+// Helper
+function obtenerPromedio(estudiante) {
+    return estudiante.calificaciones.reduce((a, b) => a + b) / estudiante.calificaciones.length
+}
+
+// 1. Usando forEach: Mostrar nombre y edad de cada estudiante
+function listarEstudiantesPorNombreYEdad(estudiantes) {
+    return estudiantes.forEach(e => console.log(`${e.nombre}: ${e.edad} años`));
+}
+
+
+// 2. Usando map: Crear array de objetos con nombre y promedio de calificaciones
+function mapearNombresYPromedio(estudiantes) {
+    return estudiantes.map(e => {
+        const promedio = obtenerPromedio(e);
+        return { nombre: e.nombre, promedio };
+    });
+}
+
+// 3. Usando filter: Obtener estudiantes con promedio mayor a 7.5
+function filtrarEstudiantesPromedio(estudiantes, promedio) {
+    return estudiantes.filter(e => obtenerPromedio(e) > promedio)
+}
+
+// 4. Usando find: Encontrar estudiante llamado 'María'
+function findByName(estudiantes, nombre) {
+    return estudiantes.find(p => p.nombre === nombre);
+}
+
+// 5. Usando reduce: Calcular la edad promedio de los estudiante
+function edadPromedioEstudiantes(estudiantes) {
+    return estudiantes.reduce((acc, e) => acc + e.edad, 0) / estudiantes.length;
+}
+
+/*
+El proceso fue similar al anterior, solo que además, definimos una función auxiliar para calcular el promedio de calificaciones de forma más clara y reutilizable.
+*/
+
+
+/////////////////////////
+//  Solución 10: Películas 
+
+// 1. Usando forEach: Mostrar título y año de cada película
+function listarPeliculasTituloYAnio(peliculas) {
+  return peliculas.forEach(p => console.log(`${p.titulo} (${p.año})`));
+}
+
+// 2. Usando map: Crear array de títulos en mayúsculas
+function mapearTitulosEnMayusculas(peliculas) {
+  return peliculas.map(p => p.titulo.toUpperCase());
+}
+
+// 3. Usando filter: Obtener películas de drama con rating mayor a 8.5
+function filtrarPeliculasDramaRating(peliculas) {
+  return peliculas.filter(p => p.genero === 'drama' && p.rating > 8.5);
+}
+
+// 4. Usando find: Encontrar película estrenada en 2014
+function findByYear(peliculas, año) {
+  return peliculas.find(p => p.año === año);
+}
+
+// 5. Usando reduce: Calcular la duración total de todas las películas
+function duracionTotalPeliculas(peliculas) {
+  return peliculas.reduce((acc, p) => acc + p.duracion, 0);
+}
+
+/*
+Esta parte fue similar a la anterior pero con un array de películas.
+*/
+

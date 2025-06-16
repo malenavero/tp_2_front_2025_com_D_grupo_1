@@ -59,12 +59,12 @@ function switchTest(numero) {
 		case 8:
 			testEjercicio8();
 			break;
-		// case 9:
-		// 	testEjercicio9();
-		// 	break;
-		// case 10:
-		// 	testEjercicio10();
-		// 	break;
+		case 9:
+		 	testEjercicio9();
+		 	break;
+		case 10:
+		 	testEjercicio10();
+		 	break;
 		default:
 			break;
 	}
@@ -124,9 +124,35 @@ function testEjercicio8() {
 }
 
 function testEjercicio9() {
-   
+    console.log("📚 forEach → Mostrar Estudiantes:");
+    listarEstudiantesPorNombreYEdad(estudiantes);
+
+    console.log("\n📚 map → Nombres y promedios:");
+    console.log("Resultado:", mapearNombresYPromedio(estudiantes));
+
+    console.log("\n📚 filter → Estudiantes con promedio > 7.5:");
+    console.log("Resultado:", filtrarEstudiantesPromedio(estudiantes, 7.5));
+
+    console.log("\n📚 find → Estudiante con nombre Maria");
+    console.log("Resultado:", findByName(estudiantes, "María"));
+
+    console.log("\n📚 reduce → Edad promedio de los estudiantes:");
+    console.log("Resultado:", edadPromedioEstudiantes(estudiantes));
 }
 
 function testEjercicio10() {
+	console.log("🍿 forEach → Título y año:");
+	listarPeliculasTituloYAnio(peliculas);
 
+	console.log("\n🍿 map → Títulos en MAYÚSCULAS:");
+	console.log("Resultado:", mapearTitulosEnMayusculas(peliculas));
+
+	console.log("\n🍿 filter → Dramas con rating > 8.5:");
+	console.log("Resultado:", filtrarPeliculasDramaRating(peliculas));
+
+	console.log("\n🍿 find → Película estrenada en 2014:");
+	console.log("Resultado:", findByYear(peliculas, 2014));
+
+	console.log("\n🍿 reduce → Duración total del catálogo:");
+	console.log("Resultado:", duracionTotalPeliculas(peliculas), "minutos");
 }
