@@ -1,4 +1,41 @@
 /////////////////////////
+// Solución 1: Área de un rectángulo
+function calcularAreaRectangulo(ancho, alto) {
+  return ancho * alto;
+}
+/*
+Para este ejercicio pensamos en aplicar directamente la fórmula matemática del área de un rectángulo, que es base por altura.
+Como la consigna pedía retornar el resultado y no mostrarlo por consola, simplemente devolvimos la multiplicación. 
+Esto permite reutilizar el valor donde se necesite.
+*/
+
+
+/////////////////////////
+// Solución 2: Contar palabras en una cadena
+function contarPalabras(cadena) {
+  return cadena.trim().split(/\s+/).length;
+}
+/*
+Al encarar este ejercicio, analizamos que las palabras están separadas por espacios.
+Para manejar posibles espacios de más o vacíos al principio o final, usamos `trim()` y luego dividimos con `split(/\s+/)` que reconoce uno o más espacios.
+Con esto logramos contar las palabras reales sin errores por espacios extra.
+*/
+
+
+/////////////////////////
+// Solución 3: Contar vocales en una cadena
+function contarVocales(cadena) {
+  const vocales = cadena.match(/[aeiouáéíóúü]/gi);
+  return vocales ? vocales.length : 0;
+}
+/*
+Acá buscamos encontrar todas las vocales presentes en una cadena, incluyendo las que tienen tilde.
+Utilizamos una expresión regular que contempla vocales comunes y acentuadas, con el modificador 'i' para ignorar mayúsculas y minúsculas. También el modificador 'g' para buscar todas las coinicidencias, no solo la primera.
+Luego, usamos `match()` para ejecutar la regex y contamos su cantidad. Si no hay ninguna, devolvemos 0.
+*/
+
+
+/////////////////////////
 // Solución 4: Palíndromo 
 function esPalindromo(palabra) {
   const normalizada = palabra.toLowerCase().trim();

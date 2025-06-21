@@ -35,15 +35,15 @@ function ejecutarTests() {
 
 function switchTest(numero) {
 	switch (numero) {
-		// case 1:
-		// 	testEjercicio1();
-		// 	break;
-		// case 2:
-		// 	testEjercicio2();
-		// 	break;
-		// case 3:
-		// 	testEjercicio3();
-		// 	break;
+		case 1:
+		    testEjercicio1();
+		 	break;
+	    case 2:
+		 	testEjercicio2();
+		 	break;
+		 case 3:
+		 	testEjercicio3();
+		 	break;
 		case 4:
 			testEjercicio4();
 			break;
@@ -72,14 +72,23 @@ function switchTest(numero) {
 
 
 function testEjercicio1() {
+	console.log(`📐 Test 1: Área de 5 x 3 = ${calcularAreaRectangulo(5, 3)}`);
+    console.log(`📐 Test 2: Área de 9 x 2 = ${calcularAreaRectangulo(9, 2)}`);
+    console.log(`📐 Test 3: Área de 7 x 4 = ${calcularAreaRectangulo(7, 4)}`);
 }
    
 
 function testEjercicio2() {
+	console.log(`✍️ Test 1: "${"Uno dos tres cuatro"}" => ${contarPalabras("Uno dos tres cuatro")}`);
+    console.log(`✍️ Test 2: "${"Uno     dos tres      cuatro cinco"}" => ${contarPalabras("Uno     dos tres      cuatro cinco")}`);
+    console.log(`✍️ Test 3: "${"    Hola     mundo "}" => ${contarPalabras("    Hola     mundo ")}`);
 }
    
 
 function testEjercicio3() {
+	console.log(`🔁 Test 1: "neuquen" => ${esPalindromo("neuquen")}`);
+    console.log(`🔁 Test 2: "reconocer" => ${esPalindromo("reconocer")}`);
+    console.log(`🔁 Test 3: "hola" => ${esPalindromo("hola")}`);
    
 }
 
