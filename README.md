@@ -1,6 +1,6 @@
 # 🧪 Trabajo Práctico Obligatorio 2 – JavaScript
 
-**Comisión D** – Grupo 1  
+**Comisión E** – Grupo 1  
 📚 _Práctica de funciones con JavaScript_  
 🌐 **[Ver online](https://malenavero.github.io/tp_2_front_2025_com_D_grupo_1/)**
 
