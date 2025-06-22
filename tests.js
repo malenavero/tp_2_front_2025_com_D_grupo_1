@@ -86,10 +86,9 @@ function testEjercicio2() {
    
 
 function testEjercicio3() {
-	console.log(`🔁 Test 1: "neuquen" => ${esPalindromo("neuquen")}`);
-    console.log(`🔁 Test 2: "reconocer" => ${esPalindromo("reconocer")}`);
-    console.log(`🔁 Test 3: "hola" => ${esPalindromo("hola")}`);
-   
+    console.log(`🔤 Test 1: "Murciélago" tiene ${contarVocales("Murciélago")} vocales`);
+    console.log(`🔤 Test 2: "Argentina" tiene ${contarVocales("Argentina")} vocales`);
+    console.log(`🔤 Test 3: "zzz" tiene ${contarVocales("zzz")} vocales`);
 }
 
 function testEjercicio4() {
